@@ -1,24 +1,36 @@
-var area = document.querySelectorAll(".area");
-console.log("area")
+var areas = document.querySelectorAll(".area");	
+
 
 var dragStart = function(e){
-    console.log("to aqui DragStart");
-} 
-
-
+	e.target.style.backgroundColor = "blue";
+	e.target.style.width  = "80%";
+	e.target.style.height = "80%";
+}
 var dragEnd = function(e){
-    for(var area of areas){
-        if((e.clientX > area.getBoundLingClientRect().x &&
-            e.clientX < area.getBoundLingClientRect().x + area.clientWidth) &&
+	for(var area of areas){
+		if((e.clientX > area.getBoundingClientRect().x &&
+				e.clientX < area.getBoundingClientRect().x +area.clientWidth ) &&
+					(e.clientY > area.getBoundingClientRect().y &&
+					e.clientY  < area.getBoundingClientRect().y +area.clientHeight)){
 
-            (e.clientY > area.getBoundLingClientRect().y &&
-             e.clientY < area.getBoundLingClientRect().y + area.clientHeight)
-        ){
-            console.log("to aqui");
-        }
-    }
-   // console.log("to aqui DragEnd");
-} 
+				if(area.childElementCount == 0){
+					area.appendChild(document.getElementById(e.target.id));
+				}
+				if(area.childElementCount == 1){
+					aux = area.firstElementChild;
+					e.target.parentElement.appendChild(document.getElementById(aux.id));
+					area.appendChild(document.getElementById(e.target.id));
+				}
 
-document.addEventListener("dragStart", dragStart);
-document.addEventListener("dragEnd", dragEnd);
+
+		}
+	}
+
+	e.target.style.width  = "100%";
+	e.target.style.height = "100%";
+	e.target.style.backgroundColor = "red";
+
+}
+
+document.addEventListener("dragstart" , dragStart);
+document.addEventListener("dragend" ,   dragEnd);
