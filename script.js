@@ -12,7 +12,6 @@ draggables.forEach(draggable => {
 })
 
 containers.forEach(container => {
-
   container.addEventListener('dragover', e => {
     e.preventDefault()
     const afterElement = getDragAfterElement(container, e.clientY)
@@ -23,7 +22,6 @@ containers.forEach(container => {
       container.insertBefore(draggable, afterElement)
     }
   })
-
 })
 
 function getDragAfterElement(container, y) {
@@ -39,61 +37,3 @@ function getDragAfterElement(container, y) {
     }
   }, { offset: Number.NEGATIVE_INFINITY }).element
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const openModalButton = document.querySelector("#open-modal");
-const closeModalButton = document.querySelector("#close-modal");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
-
-
-const listContent = document.getElementById(".listContent");
-const originalList = document.getElementById('.originalList');
-
-
-
-
-const toggleModal = () => {
-  modal.classList.toggle("hide");
-  fade.classList.toggle("hide");
-};
-
-[openModalButton, closeModalButton, fade].forEach((el) => {
-  el.addEventListener("click", () => toggleModal());
-});
-
-openModalButton.addEventListener('click', () => {
-  // Limpar a lista do modal antes de carregar os novos itens
-  //listContent.innerHTML = '';
-
-  // Copiar os itens da lista original para o modal
-  const listItems = originalList.querySelectorAll('.li');
-  listItems.forEach((item) => {
-    console.log(item);
-    listContent.appendChild(item.cloneNode(true));
-  });
-
-  // Exibir o modal
-  modal.style.display = 'block';
-});
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal || event.target.classList.contains('close')) {
-    modal.style.display = 'none';
-  }
-});

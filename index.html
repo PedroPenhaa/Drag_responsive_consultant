@@ -1,198 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <link rel="stylesheet" href="./style.css">
- 
-  <title>Drag & Drop</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Drag & Drog</title>
 </head>
 <body>
-
-  <main>
-  
-    <div class="background-image"></div>
-
-  
-    <div class="content">
-
-        <!--List Consultores -->
-      <div class="consultores container">
-
-        <ul class="sortable-list">
-          <li class="draggable item " draggable="true">
-            <div class="details">
-                <img src="./images/img-1.jpg">
-                <span>Luana Almeida</span>
-            </div>
-            <i class="uil uil-draggabledots"></i>
-          </li>
     
-          <li class="draggable item " draggable="true">
-            <div class="details">
-                <img src="./images/img-2.jpg">
-                <span>Gustavo Mesquita</span>
-            </div>
-            <i class="uil uil-draggabledots"></i>
-          </li>
-    
-          <li class="draggable item " draggable="true">
-            <div class="details">
-                <img src="./images/img-3.jpg">
-                <span>Pedro Afonso</span>
-            </div>
-            <i class="uil uil-draggabledots"></i>
-          </li>
-    
-          <li class="draggable item " draggable="true">
-              <div class="details">
-                <img src="./images/img-4.jpg">
-                <span>Helbert Faria</span>
-              </div>
-              <i class="uil uil-draggabledots"></i>
-          </li>
-    
-          <li class="draggable item " draggable="true">
-            <div class="details">
-              <img src="./images/img-5.jpg">
-              <span>Debora Santos</span>
-            </div>
-            <i class="uil uil-draggabledots"></i>
-          </li>
-    
-          <li class="draggable item " draggable="true">
-            <div class="details">
-              <img src="./images/img-6.jpg">
-              <span>João Batista</span>
-            </div>
-            <i class="uil uil-draggabledots"></i>
-          </li>
-        </ul>
-    
-      </div>
-    
-        <!-- Níveis -->
-      <div class="niveis ">
-    
-        <div class="boxs">
+    <main>
 
-          <div class="box" id="box-one">
+        <div class="background-image"></div>
 
-              <div class="container originalList">
-                <li class="draggable item "></li>
-              </div>
+        <div class="consultores">
 
-              <h1>Nivel 1</h1>
-              <button id="open-modal"><a>Abrir</a></button>
+            <h1>Consultores</h1>
 
-              <div id="fade" class="hide"></div>
-              <div id="modal" class="hide">
-                <div class="modal-header">
-                  <h2>Consultores - Nivel 1 </h2>
-                  <button id="close-modal">Fechar</button>
-                </div>
-                <div class="modal-body">
-                  
-                  <div class="conteudo">
-                    <h1>tssssst</h1>
-                    <span class="close">&times;</span>
-                    <ul id="listContent">
-                          <li>Teste 1</li>
-                          <li>Teste 1</li>
-                          <li>Teste 1</li>
-                          <li>Teste 1</li>
-                    </ul>
-                  </div>
-                  
-                 
-            
-                </div>
-              </div>
-          </div>
-    
-          <div class="box" id="box-two">
+            <ul class="container">
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-1.jpg" alt="">
+                        <span>Lara Gabriela</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-            <div class="container originalList">
-              <li class="draggable item "></li>
-            </div>
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-2.jpg" alt="">
+                        <span>Pedro Afonso</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-            <h1>Nivel 2</h1>
-            <button id="open-modal"><a>Abrir</a></button>
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-3.jpg" alt="">
+                        <span>João Marques</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-            <div id="fade" class="hide"></div>
-            <div id="modal" class="hide">
-              <div class="modal-header">
-                <h2>Consultores - Nivel 2 </h2>
-                <button id="close-modal">Fechar</button>
-              </div>
-              <div class="modal-body">
-                
-                <div class="conteudo">
-                  <h1>tssssst</h1>
-                  <span class="close">&times;</span>
-                  <ul id="listContent">
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                  </ul>
-                </div>
-                
-               
-          
-              </div>
-            </div>
-          </div>
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-4.jpg" alt="">
+                        <span>Thiago Ribeiro</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-          <div class="box" id="box-three">
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-5.jpg" alt="">
+                        <span>Adriel Claro</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-            <div class="container originalList">
-              <li class="draggable item "></li>
-            </div>
+                <li class="draggable" draggable="true">
+                    <div class="info">
+                        <img src="./images/img-6.jpg" alt="">
+                        <span>Claudio Oliveira</span>  
+                    </div>
+                    <i class="uil uil-draggabledots"></i>
+                </li>
 
-            <h1>Nivel 2</h1>
-            <button id="open-modal"><a>Abrir</a></button>
+            </ul>
 
-            <div id="fade" class="hide"></div>
-            <div id="modal" class="hide">
-              <div class="modal-header">
-                <h2>Consultores - Nivel 2 </h2>
-                <button id="close-modal">Fechar</button>
-              </div>
-              <div class="modal-body">
-                
-                <div class="conteudo">
-                  <h1>tssssst</h1>
-                  <span class="close">&times;</span>
-                  <ul id="listContent">
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                        <li>Teste 1</li>
-                  </ul>
-                </div>
-                
-               
-          
-              </div>
-            </div>
         </div>
-  
-  
 
+      
+    </main>
 
-      </div>
-
-    </div>
-  </main>
-
-
- 
-
-  
-  <script src="./script.js" defer></script>
+    <script src="./script.js" defer></script>
 
 </body>
 </html>
+
+
+<!--
+  <div class="containers">
+            <ul class="container">
+                <li class="draggable" draggable="true">1 - Pedro Afonso</li>
+                <li class="draggable" draggable="true">2 - João Marcelo</li>
+                <li class="draggable" draggable="true">3 - Isabelle Borges</li>
+            </ul>
+        </div>
+
+        <div class="containers">
+            <ul class="container">
+                <li class="draggable" draggable="true">4 - Afonso Cesar</li>
+                <li class="draggable" draggable="true">5 - Rosa Maria</li>
+                <li class="draggable" draggable="true">6 - Thulio Moreno</li>
+            </ul>
+        </div>
+
+-->
