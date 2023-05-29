@@ -207,6 +207,10 @@
   #open-modal {
     background-color: #007bff;
   }
+
+  #close-modal{
+      width: 90px;
+  }
   
   button:hover {
     opacity: 1;
@@ -227,12 +231,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    max-width: 90%;
+    width: 800px;
+    max-width: 130%;
     background-color: #fff;
     padding: 1.2rem;
     border-radius: 0.5rem;
-    z-index: 10;
+    z-index: 2024;
   }
   
   #fade,
