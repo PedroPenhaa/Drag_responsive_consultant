@@ -7,13 +7,18 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="./style.css">
  
-  <title>Document</title>
+  <title>Drag & Drop</title>
 </head>
 <body>
 
   <main>
+  
+    <div class="background-image"></div>
+
+  
     <div class="content">
 
+        <!--List Consultores -->
       <div class="consultores container">
 
         <ul class="sortable-list">
@@ -68,11 +73,12 @@
     
       </div>
     
+        <!-- Níveis -->
       <div class="niveis ">
     
         <div class="boxs">
 
-          <div class="box ">
+          <div class="box" id="box-one">
 
               <div class="container originalList">
                 <li class="draggable item "></li>
@@ -89,100 +95,93 @@
                 </div>
                 <div class="modal-body">
                   
-                  <span class="close">&times;</span>
-                  <ul id="listContent">
-
-                  </ul>
+                  <div class="conteudo">
+                    <h1>tssssst</h1>
+                    <span class="close">&times;</span>
+                    <ul id="listContent">
+                          <li>Teste 1</li>
+                          <li>Teste 1</li>
+                          <li>Teste 1</li>
+                          <li>Teste 1</li>
+                    </ul>
+                  </div>
+                  
                  
             
                 </div>
               </div>
           </div>
     
+          <div class="box" id="box-two">
 
+            <div class="container originalList">
+              <li class="draggable item "></li>
+            </div>
 
+            <h1>Nivel 2</h1>
+            <button id="open-modal"><a>Abrir</a></button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="box container">
-               <h1>Nivel 2</h1>
-               <button id="open-modal"><a>Abrir</a></button>
-
-              <div id="fade" class="hide"></div>
-              <div id="modal" class="hide">
-                <div class="modal-header">
-                  <h2>Este é o Modal</h2>
-                  <button id="close-modal">Fechar</button>
-                </div>
-                <div class="modal-body">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, quam?
-                    Quas accusantium id cupiditate iste veritatis repudiandae odio dolore
-                    voluptas. Eum, deserunt quod. Sit similique laudantium assumenda
-                    repellat vel necessitatibus.
-                  </p>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius alias
-                    voluptate doloremque, totam inventore autem quis non error! Earum
-                    ullam fuga, officiis voluptates pariatur unde et adipisci ducimus non
-                    obcaecati.
-                  </p>
-                </div>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+              <div class="modal-header">
+                <h2>Consultores - Nivel 2 </h2>
+                <button id="close-modal">Fechar</button>
               </div>
-
-
-          </div>
-    
-          <div class="box container">
-              <h1>Nivel 3</h1>
-              <button id="open-modal"><a>Abrir</a></button>
-
-              <div id="fade" class="hide"></div>
-              <div id="modal" class="hide">
-                <div class="modal-header">
-                  <h2>Este é o Modal</h2>
-                  <button id="close-modal">Fechar</button>
+              <div class="modal-body">
+                
+                <div class="conteudo">
+                  <h1>tssssst</h1>
+                  <span class="close">&times;</span>
+                  <ul id="listContent">
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                  </ul>
                 </div>
-                <div class="modal-body">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, quam?
-                    Quas accusantium id cupiditate iste veritatis repudiandae odio dolore
-                    voluptas. Eum, deserunt quod. Sit similique laudantium assumenda
-                    repellat vel necessitatibus.
-                  </p>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius alias
-                    voluptate doloremque, totam inventore autem quis non error! Earum
-                    ullam fuga, officiis voluptates pariatur unde et adipisci ducimus non
-                    obcaecati.
-                  </p>
-                </div>
+                
+               
+          
               </div>
+            </div>
           </div>
+
+          <div class="box" id="box-three">
+
+            <div class="container originalList">
+              <li class="draggable item "></li>
+            </div>
+
+            <h1>Nivel 2</h1>
+            <button id="open-modal"><a>Abrir</a></button>
+
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+              <div class="modal-header">
+                <h2>Consultores - Nivel 2 </h2>
+                <button id="close-modal">Fechar</button>
+              </div>
+              <div class="modal-body">
+                
+                <div class="conteudo">
+                  <h1>tssssst</h1>
+                  <span class="close">&times;</span>
+                  <ul id="listContent">
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                        <li>Teste 1</li>
+                  </ul>
+                </div>
+                
+               
+          
+              </div>
+            </div>
         </div>
-       
+  
+  
+
 
       </div>
 

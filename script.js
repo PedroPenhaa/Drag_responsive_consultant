@@ -44,13 +44,28 @@ function getDragAfterElement(container, y) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const openModalButton = document.querySelector("#open-modal");
+const closeModalButton = document.querySelector("#close-modal");
 const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+
+
 const listContent = document.getElementById(".listContent");
 const originalList = document.getElementById('.originalList');
 
 
-const fade = document.querySelector("#fade");
 
 
 const toggleModal = () => {
