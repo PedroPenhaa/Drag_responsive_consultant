@@ -49,7 +49,7 @@ const modal = document.querySelector("#modal");
 const listContent = document.getElementById(".listContent");
 const originalList = document.getElementById('.originalList');
 
-const closeModalButton = document.querySelector("#close-modal");
+
 const fade = document.querySelector("#fade");
 
 
@@ -67,7 +67,7 @@ openModalButton.addEventListener('click', () => {
   //listContent.innerHTML = '';
 
   // Copiar os itens da lista original para o modal
-  const listItems = originalList.querySelectorAll('li');
+  const listItems = originalList.querySelectorAll('.li');
   listItems.forEach((item) => {
     console.log(item);
     listContent.appendChild(item.cloneNode(true));
