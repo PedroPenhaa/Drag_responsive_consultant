@@ -1,36 +1,39 @@
-var areas = document.querySelectorAll(".area");	
+const draggables = document.querySelectorAll('.draggable')
+const containers = document.querySelectorAll('.container')
 
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging')
+  })
 
-var dragStart = function(e){
-	e.target.style.backgroundColor = "blue";
-	e.target.style.width  = "80%";
-	e.target.style.height = "80%";
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging')
+  })
+})
+
+containers.forEach(container => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault()
+    const afterElement = getDragAfterElement(container, e.clientY)
+    const draggable = document.querySelector('.dragging')
+    if (afterElement == null) {
+      container.appendChild(draggable)
+    } else {
+      container.insertBefore(draggable, afterElement)
+    }
+  })
+})
+
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect()
+    const offset = y - box.top - box.height / 2
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child }
+    } else {
+      return closest
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element
 }
-var dragEnd = function(e){
-	for(var area of areas){
-		if((e.clientX > area.getBoundingClientRect().x &&
-				e.clientX < area.getBoundingClientRect().x +area.clientWidth ) &&
-					(e.clientY > area.getBoundingClientRect().y &&
-					e.clientY  < area.getBoundingClientRect().y +area.clientHeight)){
-
-				if(area.childElementCount == 0){
-					area.appendChild(document.getElementById(e.target.id));
-				}
-				if(area.childElementCount == 1){
-					aux = area.firstElementChild;
-					e.target.parentElement.appendChild(document.getElementById(aux.id));
-					area.appendChild(document.getElementById(e.target.id));
-				}
-
-
-		}
-	}
-
-	e.target.style.width  = "100%";
-	e.target.style.height = "100%";
-	e.target.style.backgroundColor = "red";
-
-}
-
-document.addEventListener("dragstart" , dragStart);
-document.addEventListener("dragend" ,   dragEnd);
