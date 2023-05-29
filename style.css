@@ -141,6 +141,8 @@
   color: white;
 }
 
+
+
 .button:hover{
   transition: transform 0.4s ease;
   transform: scale(1.2);
@@ -209,7 +211,11 @@
   }
 
   #close-modal{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 90px;
+      height: 40px;
   }
   
   button:hover {
@@ -244,6 +250,7 @@
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
+    color: black;
   }
   
   .modal-header {
@@ -253,10 +260,18 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-  }
+    }
+
+    .modal-header h2{
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 2025;
+    }
   
   .modal-body p {
     margin-bottom: 1rem;
+
   }
   
   #modal.hide,
