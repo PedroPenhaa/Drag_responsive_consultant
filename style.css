@@ -28,7 +28,7 @@ main{
   left: 0;
   width: 100vh;
   height: 100vh;
- /* display: none; */
+  display: none; 
 }
 
 .conteudo-modal{
