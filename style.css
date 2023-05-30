@@ -172,8 +172,11 @@ main{
 }
 
 .rodape-modal .btn-config{
+  display: flex;
+  align-self: center;
+  justify-content: center;
   width: 100px;
-  padding: 10px 5px;
+  padding: 10px;
   font-size: 12px;
   font-weight: bold;
   background-color: rgba(0, 128, 128, 0.8);
@@ -254,7 +257,14 @@ main{
   border: 1px solid black;
   cursor: move;
   border-radius: 5px;
+  transition: .3s;
 }
+
+.draggable:hover{
+  transform: scale(1.05);
+}
+
+
 
 .draggable.dragging {
   opacity: .5;
