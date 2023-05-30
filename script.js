@@ -48,5 +48,9 @@ function getDragAfterElement(container, y) {
 
 
 function abrirModal(carregarModal){
-  console.log("Carregar a janela modal: " + carregarModal)
+  console.log("Carregar a janela modal: " + carregarModal);
+}
+
+function fecharModal(fecharModal){
+  console.log("Fechar a janela modal: " + fecharModal);
 }

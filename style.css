@@ -20,6 +20,55 @@ main{
   z-index: -1;
 }
 
+/* MODAL */
+.modal{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+ /* display: none; */
+}
+
+.conteudo-modal{
+  margin: 0 auto;
+  margin-top: 3%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius:8px;
+}
+
+.cabecalho-modal{
+  padding: 1px 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #eee;
+}
+
+.cabecalho-modal .titulo-modal{
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cabecalho-modal .cabecalho-modal-fechar{
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.corpo-modal{
+  padding: 1px 8px 8px 8px;
+}
+
+.rodape-modal{
+  border-top: solid #eee 1px;
+  padding: 8px;
+}
+
+.btn-outline-sucess{
+  color: #47a447;
+}
+
 .conteudo{
   max-width: 100%;
   width: 100%;
@@ -151,7 +200,10 @@ main{
 }
 
 .box-nivel button{
-  margin-top: 5px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 15px;
   height: 35px;
   border: 2px solid #333;
   border-radius: 5px;
@@ -162,6 +214,9 @@ main{
 
 .box-nivel button:hover{
   transform: scale(1.1);
+  background: white;
+  color: blue;
+  border: 2px solid blue;
 }
 
 #nivel1{
