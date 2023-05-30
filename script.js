@@ -37,3 +37,16 @@ function getDragAfterElement(container, y) {
     }
   }, { offset: Number.NEGATIVE_INFINITY }).element
 }
+
+
+
+
+
+
+
+
+
+
+function abrirModal(carregarModal){
+  console.log("Carregar a janela modal: " + carregarModal)
+}
