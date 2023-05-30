@@ -75,6 +75,18 @@ main{
   padding: 1px 8px 8px 8px;
 }
 
+.corpo-modal .destinationList{
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+
+}
+
+.corpo-modal .destinationList li{
+  color: black;
+  display: block;
+}
+
 .rodape-modal{
   border-top: solid #eee 1px;
   padding: 8px;
@@ -248,6 +260,20 @@ main{
   border: 2px solid rgba(0, 128, 128, 0.8);
 }
 
+.box-nivel .container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 101px;
+  width: 84px;
+  
+}
+
+.box-nivel .container li{
+  display: none;
+}
+
+
 #nivel1{
   background: linear-gradient(to right, rgb(173, 216, 230), rgb(65, 105, 225));
 
@@ -266,3 +292,10 @@ main{
   opacity: .8;
 }
 
+
+
+
+
+.enter{
+  border: dashed 2px #bbb;
+}

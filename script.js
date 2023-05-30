@@ -48,7 +48,7 @@ function getDragAfterElement(container, y) {
 
 
 function abrirModal(carregarModal){
-  console.log("Carregar a janela modal: " + carregarModal);
+/*  console.log("Carregar a janela modal: " + carregarModal); */
   let modal = document.getElementById(carregarModal);
 
   modal.style.display = 'block';
@@ -57,9 +57,26 @@ function abrirModal(carregarModal){
 }
 
 function fecharModal(fecharModal){
-  console.log("Fechar a janela modal: " + fecharModal);
+/*  console.log("Fechar a janela modal: " + fecharModal); */
   let modal = document.getElementById(fecharModal);
 
   modal.style.display = 'none';
   document.body.style.overflow = 'auto';
+}
+
+
+
+
+
+function exportList(originLists){
+  var originList = document.getElementById(originLists);
+  var destinationList = document.getElementById('.destinationList');
+  var originItens = originList.getElementsByTagName("li");
+
+
+  while(originItens.length > 0){
+    var item = originItens[0];
+    destinationList.appendChild(item);
+  }
+
 }
