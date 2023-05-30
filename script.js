@@ -67,16 +67,14 @@ function fecharModal(fecharModal){
 
 
 
+function exportList(listId) {
+  var listaOrigem = document.getElementById(listId);
+  var listaDestino = document.querySelector(".destinationListTest");
 
-function exportList(originLists){
-  var originList = document.getElementById(originLists);
-  var destinationList = document.getElementById('.destinationList');
-  var originItens = originList.getElementsByTagName("li");
+  var itensOrigem = listaOrigem.getElementsByTagName("li");
 
-
-  while(originItens.length > 0){
-    var item = originItens[0];
-    destinationList.appendChild(item);
+  while (itensOrigem.length > 0) {
+    var item = itensOrigem[0];
+    listaDestino.appendChild(item);
   }
-
 }
