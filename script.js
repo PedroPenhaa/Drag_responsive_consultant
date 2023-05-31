@@ -88,9 +88,3 @@ function moveItem() {
     destinationList.appendChild(selectedItem);
   }
 }
-
-
-
-
-
-/*tst*/ 
