@@ -39,8 +39,8 @@ main{
 .conteudo-modal{
   margin: 0 auto;
   margin-top: 60px;
-  height: 550px;
-  max-width: 600px;
+  height: 510px;
+  max-width: 500px;
   background-color: #fff;
   border-radius:8px;
 }
@@ -56,7 +56,7 @@ main{
 .cabecalho-modal .titulo-modal{
   font-weight: bold;
   margin: 10px 25px;
-
+  margin-left: 163px;
 }
 
 .cabecalho-modal .uil-times-circle{
@@ -80,9 +80,24 @@ main{
   justify-content: center;
 }
 
+.corpo-modal{
+  margin-top: -10px;
+}
+
+.corpo-modal p{
+  font-size: 16px;
+}
+
+.corpo-modal p span{
+  color: #333;
+  font-size: 14px;
+  text-shadow: slategrey;
+}
+
 .corpo-modal .list-consultores{
-  margin-top: 10px;
-  width: 450px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 265px;
   height: 280px;
   background: #eee;
   border: 1px solid #bbb;
@@ -110,13 +125,13 @@ main{
 
 .corpo-modal .list-consultores .destinationList .draggable{
   padding: 1rem;
-  /* width: 300px; */
+  width: 330px;
   height: 30px;
   /* background-color: white; */
   /* border: 1px solid black; */
   cursor: move;
   border-radius: 5px;
-  margin-right: 20px;
+  margin-left: 40px;
   transition: transform .3s ease;
 }
 
@@ -160,20 +175,20 @@ main{
 }
 
 .rodape-modal{
-  width: 560px;
+  width: 470px;
   height: 50px;
   display: flex;
   flex-direction: column;
   border-top: solid #eee 1px;
-  margin: 10px;
-  padding: 8px;
+
   position: absolute;
 }
 
 .buttons{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-left: 30px;
   gap: 15px;
 }
 
@@ -198,7 +213,7 @@ main{
   color:  rgba(0, 128, 128, 0.8);
   background-color: white;
   border: 1px solid  rgba(0, 128, 128, 0.4); 
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 
@@ -250,6 +265,7 @@ main{
   display: flex;
   justify-content: center;
   align-items:center;
+  flex-direction: column;
   width: 85%;
   height: 400px;
   background-color:white;
@@ -257,10 +273,40 @@ main{
   top: 0;
   margin: 0;
   padding: 10px;
-  
+}
+
+.qntConsultores{
+width: 100%;
+height: 30px;
+padding: 0;
+display: flex;
+justify-content: center;
+color: white;
+border: 1px solid #bbb;
+border-radius: 5px;
+}
+
+.statusConsult{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+#itemCountDisponivies{
+  background-color: rgba(0, 102, 51, 0.7);
+}
+
+#itemCountAndamento{
+  background:rgba(255, 0, 0, 0.5);
 }
 
 .consultores  .list-box .listConsultores{
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -283,7 +329,7 @@ main{
   display: flex;
   align-items:center;
   justify-content: center;
-  margin-right: 39px;
+  margin-right: 41px;
 }
 
 .draggable:hover{
@@ -293,8 +339,9 @@ main{
 .draggable .info{
   margin-top: 2.5px;
   padding: 1rem;
-  width: 100%;
-  height: 30px;
+  width: 220px;
+  margin-right: 39px;
+  height: 24px;
   background-color: white;
   border: 1px solid black;
   cursor: move;
@@ -372,7 +419,7 @@ main{
 
                     /*Tarefas*/
 .tarefas{
-  padding: 1rem;
+  padding: 2rem;
   max-width: 550px;
   background-color: rgba(0, 128, 128, 0.4);
   display: flex;
@@ -381,7 +428,7 @@ main{
   flex-direction: column;
   width: 500px;
   margin-left: 50px;
-  height: 530px;
+  height: 500px;
   border-radius: 1rem;
 }
 
@@ -396,13 +443,22 @@ main{
   height: 10px;  
 }
 
+.tarefas .header-box h1{
+   
+    
+}
+
+
 .box-tarefas{
-  height: 350px;
+  margin-top: -5px;
+  height: 480px;
   width: 430px;
+  padding: 15px;
   background-color: white;
   border-radius: 3px;
-  padding: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -410,8 +466,7 @@ main{
   display: flex;
   justify-content: space-between;
   width: 430px;
-  margin-top: 15px;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
 }
 
 .box-tarefas .empresas{
@@ -423,7 +478,7 @@ main{
 .box-nivel{
   position: relative;
   width: 123px;
-  height: 125px;
+  height: 115px;
   
   border-radius: 10px;
   display: flex;
@@ -491,21 +546,28 @@ main{
 
 #nivel1{
   background: linear-gradient(to right, rgb(173, 216, 230), rgb(65, 105, 225));
-
-  opacity: .7;
 }
 
 #nivel2{
   background: linear-gradient(to right, rgb(255, 192, 203), rgb(255, 105, 180));
-
-  opacity: .8;
 }
 
 #nivel3{
   background: linear-gradient(to right, rgb(144, 238, 144), rgb(34, 139, 34));
-
-  opacity: .8;
 }
+
+#nivel4{
+  background: linear-gradient(to right, rgb(144, 238, 144), rgb(34, 139, 34));
+}
+
+#nivel5{
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
+
+#nivel6{
+  background: linear-gradient(to right, rgb(173, 216, 230), rgb(65, 105, 225));
+}
+
 
 #empresa1{
   background: linear-gradient(to right, #ffafbd, #ffc3a0);
@@ -516,7 +578,7 @@ main{
 }
 
 #empresa3{
-  background: linear-gradient(to right, #f6d365, #fda085);
+  background: linear-gradient(to right, rgb(255, 192, 203), rgb(255, 105, 180));
 }
 
 

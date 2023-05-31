@@ -74,10 +74,23 @@ function exportList(listId) {
   console.log("a lista contem "+itensOrigem.length+" elementos");
 
   while (itensOrigem.length > 0) {
-    console.log("FOOOI");
     var item = itensOrigem[0];
     listaDestino.appendChild(item);
   }
 }
+
+/*  MOVE ITEM - INCOMPLETE*/
+function moveItem() {
+  var sourceList = document.getElementById("sourceList");
+  var destinationList = document.getElementById("destinationList");
+  var selectedItem = sourceList.options[sourceList.selectedIndex];
+  if (selectedItem) {
+    destinationList.appendChild(selectedItem);
+  }
+}
+
+
+
+
 
 /*tst*/ 
