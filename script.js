@@ -46,7 +46,7 @@ function getDragAfterElement(container, y) {
 
 
 
-
+/*ABRE E FECHA MODAL*/
 function abrirModal(carregarModal){
 /*  console.log("Carregar a janela modal: " + carregarModal); */
   let modal = document.getElementById(carregarModal);
@@ -66,14 +66,17 @@ function fecharModal(fecharModal){
 
 
 
-
+/*EXPORT ITEMS LIST*/
 function exportList(listId) {
   var listaOrigem = document.getElementById(listId);
-  var listaDestino = document.querySelector(".destinationListTest");
+  var listaDestino = document.querySelector(".destinationList");
 
-  var itensOrigem = listaOrigem.getElementsByTagName("li");
+  var itensOrigem = listaOrigem.getElementsByTagName('li');
+
+  console.log("a lista contem "+itensOrigem.length+" elementos");
 
   while (itensOrigem.length > 0) {
+    console.log("FOOOI");
     var item = itensOrigem[0];
     listaDestino.appendChild(item);
   }
