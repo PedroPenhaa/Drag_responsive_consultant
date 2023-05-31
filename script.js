@@ -64,10 +64,42 @@ function fecharModal(fecharModal){
   document.body.style.overflow = 'auto';
 }
 
+
+
+
+
+
+
+
+
+/* EXPORT ITEM UNI*/
+function exportarItem(item){
+
+
+
+  var lista1 = document.querySelector(".destinationList");
+  var lista2 = document.querySelector(".listConsultores");
+
+  lista2.appendChild(item); 
+ 
+
+  var novoItem = item.cloneNode(true);
+
+ 
+  lista1.removeChild(item);
+ 
+
+  
+}
+
+
+
+
+
 /*EXPORT ITEMS LIST*/
 function exportList(listId) {
   var listaOrigem = document.getElementById(listId);
-  var listaDestino = document.querySelector(".destinationList");
+  var listaDestino = document.querySelector('.destinationList');
 
   var itensOrigem = listaOrigem.getElementsByTagName('li');
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Drag & Drog</title>
 </head>
-<body onload="itemQnt()">
+<body>
     
     <main>
 
@@ -80,7 +80,7 @@
 
                         <div class="divListConsult">
                             <ul class="container listConsultores">
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true" onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-1.jpg" alt="">
                                         <span>Lara Gabriela</span>  
@@ -88,7 +88,7 @@
                                     </div>
                                 </li>
                 
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true"  onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-2.jpg" alt="">
                                         <span>Pedro Afonso</span>  
@@ -96,7 +96,7 @@
                                     </div>
                                 </li>
                 
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true"  onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-3.jpg" alt="">
                                         <span>João Marques</span>  
@@ -104,7 +104,7 @@
                                     </div>
                                 </li>
                 
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true" onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-4.jpg" alt="">
                                         <span>Thiago Ribeiro</span>  
@@ -112,7 +112,7 @@
                                     </div>                                
                                 </li>
                 
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true" onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-5.jpg" alt="">
                                         <span>Adriel Claro</span>  
@@ -120,7 +120,7 @@
                                     </div>                               
                                 </li>
                 
-                                <li class="draggable" draggable="true">
+                                <li class="draggable" draggable="true" onclick="exportarItem(this)">
                                     <div class="info">
                                         <img src="./images/img-6.jpg" alt="">
                                         <span>Claudio Oliveira</span> 
@@ -309,14 +309,30 @@
 
     </main>
 
-   
+
     <script>
-		function itemQnt() {
-            var itemList = document.getElementById("listConsultores");
-            var itemCount = document.getElementById("itemCount");
-            itemCount.innerHTML = "A lista contém " + itemList.children.length + " itens.";  
+
+        function exportarItem(item){
+            console.log("URIII");
+            
+            var lista1 = document.getElementById("destinationList");
+            var lista2 = document.getElementById("listConsultores");
+          
+            lista1.removeChild(item);
+            lista2.appendChild(item);  
+            
         }
-	</script>
+          
+       /* var destinationListItems = document.querySelectorAll("destinationList li");
+        destinationListItems.forEach(function(item){
+            item.addEventListener("click", function(){
+                console.log("FOI")
+                exportarItem(item);
+            })
+        }); /*
+
+    </script>
+
 
     <script src="./script.js" defer></script>
 
@@ -324,6 +340,16 @@
 </html>
 
 <!--
+
+  <script>
+		function itemQnt() {
+            var itemList = document.getElementById("listConsultores");
+            var itemCount = document.getElementById("itemCount");
+            itemCount.innerHTML = "A lista contém " + itemList.children.length + " itens.";  
+        }
+	</script>
+
+
 
    <div class="teste">
             <ul class="originListTest">
