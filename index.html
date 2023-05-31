@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Drag & Drog</title>
 </head>
-<body>
+<body onload="itemQnt()">
     
     <main>
 
@@ -58,6 +58,8 @@
                 </div>
             </div>
         </div>
+
+       
         
         <div class="box-principal">
             
@@ -71,12 +73,14 @@
                     <div class="header-box">
                         <h1>Consultores</h1>
                     </div>
-                         
+                       
+                    <div class="qntConsultores">
+                        <p class="statusConsult itemCountDisponivies">    <!-- Text -->     </p>
+                        <p class="statusConsult itemCountOcupados">  <!-- Text -->        </p>
+                    </div>
+
                     <div class="list-box">
-                        <div class="qntConsultores">
-                            <p class="statusConsult" id="itemCountDisponivies">Disponíveis - 6</p>
-                            <p class="statusConsult" id="itemCountAndamento">Ocupados - 0</p>
-                        </div>
+                       
 
                         <div class="divListConsult">
                             <ul class="container listConsultores">
@@ -309,32 +313,12 @@
 
     </main>
 
-
     <script>
-
-        function exportarItem(item){
-            console.log("URIII");
-            
-            var lista1 = document.getElementById("destinationList");
-            var lista2 = document.getElementById("listConsultores");
-          
-            lista1.removeChild(item);
-            lista2.appendChild(item);  
-            
-        }
-          
-       /* var destinationListItems = document.querySelectorAll("destinationList li");
-        destinationListItems.forEach(function(item){
-            item.addEventListener("click", function(){
-                console.log("FOI")
-                exportarItem(item);
-            })
-        }); /*
-
-    </script>
-
+		
+	</script>
 
     <script src="./script.js" defer></script>
+
 
 </body>
 </html>

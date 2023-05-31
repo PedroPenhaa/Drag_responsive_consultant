@@ -4,10 +4,12 @@ const containers = document.querySelectorAll('.container')
 draggables.forEach(draggable => {
   draggable.addEventListener('dragstart', () => {
     draggable.classList.add('dragging')
+    
   })
 
   draggable.addEventListener('dragend', () => {
     draggable.classList.remove('dragging')
+    itemQnt();
   })
 })
 
@@ -111,12 +113,29 @@ function exportList(listId) {
   }
 }
 
-/*  MOVE ITEM - INCOMPLETE*/
-function moveItem() {
-  var sourceList = document.getElementById("sourceList");
-  var destinationList = document.getElementById("destinationList");
-  var selectedItem = sourceList.options[sourceList.selectedIndex];
-  if (selectedItem) {
-    destinationList.appendChild(selectedItem);
-  }
+
+
+
+
+
+
+/*UPDATING QNT LIST*/
+function itemQnt() {
+  var itemList = document.querySelector(".listConsultores");
+  var itemCount = document.querySelector(".itemCountDisponivies");
+  var itemOcupados = document.querySelector(".itemCountOcupados");
+
+  itemCount.innerHTML = "Disponíveis - " + itemList.children.length;  
+  itemOcupados.innerHTML = "Em tarefas - " + (6-itemList.children.length);
+
+
 }
+
+function atualizaDados(){
+
+ itemQnt();
+
+
+}
+
+setInterval(atualizaDados, 1000);
