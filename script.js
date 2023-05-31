@@ -135,7 +135,7 @@ function consultoresQnt(){
   var listModal = document.querySelector('.destinationList');
   var countUp = document.querySelector('.itemCountConsultores');
 
-  countUp.innerHTML = "Em suporte - " + listModal.children.length;
+  countUp.innerHTML = listModal.children.length ;
 }
 
 function atualizaDados(){

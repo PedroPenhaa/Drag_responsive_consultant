@@ -106,12 +106,21 @@ main{
   text-shadow: slategrey;
 }
 
-.statusConsultModal{
+.corpo-modal .description .statusConsultModal{
   margin-top: 20px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
+.corpo-modal .description .statusConsultModal .itemCountConsultores{
+  
+  color: rgba(0, 100, 0, 1);
+  font-size: 18px;
+  font-weight: bold;
+}  
+
 .corpo-modal .list-consultores{
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   width: 265px;
   height: 280px;
