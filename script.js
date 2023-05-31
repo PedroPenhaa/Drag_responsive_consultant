@@ -131,11 +131,18 @@ function itemQnt() {
 
 }
 
+function consultoresQnt(){
+  var listModal = document.querySelector('.destinationList');
+  var countUp = document.querySelector('.itemCountConsultores');
+
+  countUp.innerHTML = "Em suporte - " + listModal.children.length;
+}
+
 function atualizaDados(){
 
  itemQnt();
-
+ consultoresQnt();
 
 }
 
-setInterval(atualizaDados, 1000);
+setInterval(atualizaDados, 500);
