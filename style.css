@@ -23,7 +23,7 @@ main{
   z-index: -1;
 }
 
-/* MODAL */
+                      /* MODAL */
 .modal{
   width: 100%;
   height: 100vh;
@@ -110,20 +110,20 @@ main{
 
 .corpo-modal .list-consultores .destinationList .draggable{
   padding: 1rem;
-  width: 300px;
+  /* width: 300px; */
   height: 30px;
-  background-color: white;
-  border: 1px solid black;
+  /* background-color: white; */
+  /* border: 1px solid black; */
   cursor: move;
   border-radius: 5px;
   margin-right: 20px;
   transition: transform .3s ease;
 }
 
-
 .corpo-modal .list-consultores .destinationList .draggable:hover{
-  border: 1px solid rgba(0, 128, 128, 0.8);
+
   transform: scale(1.05);
+  cursor:pointer;
 }
 
 
@@ -146,11 +146,17 @@ main{
 .destinationList .draggable i:hover{
   color: rgba(0, 128, 128, 0.8);
   transform: scale(1.2);
+
 }
 
 .corpo-modal .destinationList li{
   color: black;
   display: block;
+
+}
+
+.corpo-modal .destinationList li:hover{
+  cursor:pointer;
 }
 
 .rodape-modal{
@@ -187,21 +193,24 @@ main{
   
 }
 
-
-
 .rodape-modal .btn-config:hover{
+  cursor:pointer;
   color:  rgba(0, 128, 128, 0.8);
   background-color: white;
-  border: 1px solid  rgba(0, 128, 128, 0.4);
-
-
-
-  
+  border: 1px solid  rgba(0, 128, 128, 0.4); 
   transform: scale(1.02);
 }
 
 
-/* CONFIG BOX */
+
+
+
+
+
+
+
+
+              /* CONFIG BOX */
 .conteudo{
   padding: 0;
   margin: 0;
@@ -213,7 +222,7 @@ main{
 }
 
 .consultores{
-  padding: 1rem;
+  padding: 2rem;
   max-width: 550px;
   background-color: rgba(0, 128, 128, 0.4);
   display: flex;
@@ -226,32 +235,65 @@ main{
   border-radius: 1rem;
 }
 
-.consultores h1{
+.consultores .header-box{
+  display: flex;
+  align-items:center;
+  justify-content: center;
   color:white;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  width: 100%; 
+  height: 10px;  
 }
 
-.consultores ul{
-  padding: 0;
+.consultores .list-box{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 85%;
+  height: 400px;
+  background-color:white;
+  border-radius: 5px;
+  top: 0;
+  margin: 0;
+  padding: 10px;
   
 }
 
+.consultores  .list-box .listConsultores{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+}
+
 .container li{
+  width: 100%;
   list-style-type: none;
   display: flex;
   align-items:center;
-
 }
 
 .container li i{
-  margin-left: 20px;
+ 
 }
 
 .draggable {
-  margin-top: 2px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-right: 39px;
+}
+
+.draggable:hover{
+  transform: scale(1.05);
+}
+
+.draggable .info{
+  margin-top: 2.5px;
   padding: 1rem;
-  width: 220px;
+  width: 100%;
   height: 30px;
   background-color: white;
   border: 1px solid black;
@@ -259,12 +301,6 @@ main{
   border-radius: 5px;
   transition: .3s;
 }
-
-.draggable:hover{
-  transform: scale(1.05);
-}
-
-
 
 .draggable.dragging {
   opacity: .5;
@@ -290,10 +326,51 @@ main{
   font-size: 16px;
 }
 
+.container .draggable .info i{
+  position: relative;
+  font-size: 16px;
+  right: 0;
+  margin-left: 25px;
+}
+
+.rodape-box{
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.rodape-box button{
+  display:flex;
+  align-items:center;
+  justify-content: center;  
+  padding: 10px;
+  width: 40%;
+  height:35px;
+  font-size: 16px;
+  text-shadow: bold;
+  background-color: white;
+  color: rgba(0, 128, 128, 1);
+  transition: transform 0.3s ease;
+  border: 2px solid rgba(0, 128, 128, 1);
+  border-radius:10px;
+}
+
+.rodape-box button:hover{
+  transform: scale(1.05);
+  background-color: rgba(0, 128, 128, 1);
+  color: white;
+  transition: transform 0.3s ease;
+  border: 2px solid #bbb;
+}
 
 
 
-/*Tarefas*/
+
+
+                    /*Tarefas*/
 .tarefas{
   padding: 1rem;
   max-width: 550px;
@@ -304,14 +381,19 @@ main{
   flex-direction: column;
   width: 500px;
   margin-left: 50px;
-  height: 500px;
+  height: 530px;
   border-radius: 1rem;
 }
 
-.tarefas h1{
+.tarefas .header-box{
+  display: flex;
+  align-items:center;
+  justify-content: center;
   color:white;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  width: 100%; 
+  height: 10px;  
 }
 
 .box-tarefas{
@@ -321,8 +403,21 @@ main{
   border-radius: 3px;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
 
+.box-tarefas .niveis{
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+  margin-top: 15px;
+  margin-bottom: 48px;
+}
+
+.box-tarefas .empresas{
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
 }
 
 .box-nivel{
@@ -338,14 +433,19 @@ main{
   color: white;
   font-size: 11px;
   border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
 
+.box-nivel:hover h1{
+  transform: scale(1.08);
 }
 
 .box-nivel h1{
-  margin-top: 20px;
+  margin-top: -12px;
   color: white;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  
 }
 
 .box-nivel button{
@@ -407,8 +507,17 @@ main{
   opacity: .8;
 }
 
+#empresa1{
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
 
+#empresa2{
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+}
 
+#empresa3{
+  background: linear-gradient(to right, #f6d365, #fda085);
+}
 
 
 .enter{
