@@ -64,8 +64,6 @@ function fecharModal(fecharModal){
   document.body.style.overflow = 'auto';
 }
 
-
-
 /*EXPORT ITEMS LIST*/
 function exportList(listId) {
   var listaOrigem = document.getElementById(listId);
@@ -81,3 +79,5 @@ function exportList(listId) {
     listaDestino.appendChild(item);
   }
 }
+
+/*tst*/ 
