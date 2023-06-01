@@ -335,14 +335,17 @@ z-index: 2023;
 }
 
 .consultores  .list-box .listConsultores{
-  margin-top: 5px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items:center;
   justify-content: center;
-  width: 100%;
-  padding-top: 12px;
-}
+  width: 220px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 340px;
+
+} 
 
 
 .container li{
@@ -376,7 +379,6 @@ z-index: 2023;
   margin-top: 2.5px;
   padding: 1rem;
   width: 220px;
-  margin-right: 39px;
   height: 24px;
   background-color: white;
   border: 1px solid black;
