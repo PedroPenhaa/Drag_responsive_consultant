@@ -343,6 +343,8 @@ z-index: 2023;
   width: 220px;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   height: 340px;
 
 } 
@@ -363,7 +365,6 @@ z-index: 2023;
   display: flex;
   align-items:center;
   justify-content: center;
-  margin-right: 41px;
 }
 
 .draggable:hover{
