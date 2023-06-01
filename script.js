@@ -172,6 +172,13 @@ function fecharModal(fecharModal){
 }
 
 /* EXPORT ITEM UNI*/
+
+
+
+
+
+
+
 function exportarItem(item){
 
   var lista1 = document.querySelector(".destinationList");
@@ -183,7 +190,7 @@ function exportarItem(item){
 
   
 
-
+/*
 
 
 
@@ -191,7 +198,7 @@ function exportarItem(item){
   if (icon) {
     icon.classList.remove("uil-draggabledots");
     icon.classList.add("uil-trash-alt");
-  }
+  }*/ 
 }
 
 var listConsultoresItems = document.querySelectorAll(".listConsultores .draggable");
