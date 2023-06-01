@@ -1,5 +1,6 @@
 const draggables = document.querySelectorAll('.draggable')
 const containers = document.querySelectorAll('.container')
+const boxnivel = document.querySelectorAll('.box-nivel')
 
 
 draggables.forEach(draggable => {
@@ -11,7 +12,9 @@ draggables.forEach(draggable => {
     draggable.classList.remove('dragging')
     containers.forEach(container => {
       container.classList.remove('container-dragging-over')
+
       const boxNivel = container.closest('.box-nivel');
+      boxNivel 
       if (boxNivel && boxNivel.contains(draggable)) {
         const list = boxNivel.querySelector('.container');
         list.appendChild(draggable);
@@ -34,6 +37,19 @@ draggables.forEach(draggable => {
   })
 })
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 containers.forEach(container => {
   container.addEventListener('dragover', e => {
@@ -77,6 +93,24 @@ containers.forEach(container => {
     container.classList.remove('container-dragging-over')
   })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 containers.forEach(container => {

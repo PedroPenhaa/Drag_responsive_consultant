@@ -368,8 +368,8 @@ z-index: 2023;
 }
 
 .container-dragging-over {
-  border-style: dashed;
-  border-color: #333;
+  border: 3px dashed  rgba(0, 128, 128, 1);
+  border-radius: 10px;
 }
 
 .draggable .info{
@@ -523,7 +523,7 @@ z-index: 2023;
   flex-direction: column;
   color: white;
   font-size: 11px;
-  border: 1px solid #333;
+
   transition: transform 0.3s ease;
 }
 
@@ -541,13 +541,14 @@ z-index: 2023;
 
 .box-nivel button{
   position: absolute;
+  margin-left: 1px;
   bottom: -10px;
   display: flex;
   cursor: pointer;
   align-items: center;
   justify-content: center;
   padding: 15px;
-  width: 128px;
+  width: 123px;
   height: 32px;
   border-radius: 5px;
   text-transform: bold;
@@ -571,8 +572,11 @@ z-index: 2023;
   top: 0;
   left: 0;
   height: 100%;
-  width: 82px;
-  margin-left: -3px;
+  width: 80px;
+}
+
+.my-box-nivel{
+  border: none;
 }
 
 .box-nivel .container li{
