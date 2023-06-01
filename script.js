@@ -1,6 +1,51 @@
 const draggables = document.querySelectorAll('.draggable')
 const containers = document.querySelectorAll('.container')
 
+
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging')
+  })
+
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging')
+    containers.forEach(container => {
+      container.classList.remove('container-dragging-over')
+      const boxNivel = container.closest('.box-nivel');
+      if (boxNivel && boxNivel.contains(draggable)) {
+        const list = boxNivel.querySelector('.container');
+        list.appendChild(draggable);
+      }
+    })
+  })
+})
+
+
+
+/*
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging')
+  })
+
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging')
+    containers.forEach(container => {
+      container.classList.remove('container-dragging-over')
+      const boxNivel = container.closest('.box-nivel');
+      if (boxNivel) {
+        boxNivel.style.border = 'none';
+        const list = boxNivel.querySelector('.container');
+        if (list.contains(container)) {
+          list.appendChild(draggable);
+        }
+      }
+    })
+  })
+})
+*/
+
+/*
 draggables.forEach(draggable => {
   draggable.addEventListener('dragstart', () => {
     draggable.classList.add('dragging')
@@ -12,8 +57,68 @@ draggables.forEach(draggable => {
     itemQnt();
   })
 })
+*/
+
 
 containers.forEach(container => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container, e.clientY);
+    const draggable = document.querySelector('.dragging');
+    if (afterElement == null) {
+      container.appendChild(draggable);
+    } else {
+      container.insertBefore(draggable, afterElement);
+    }
+
+    const boxNiveis = container.querySelectorAll('.box-nivel');
+    boxNiveis.forEach(boxNivel => {
+      const boxNivelRect = boxNivel.getBoundingClientRect();
+      const draggableRect = draggable.getBoundingClientRect();
+      if (draggableRect.left >= boxNivelRect.left && draggableRect.right <= boxNivelRect.right && draggableRect.top >= boxNivelRect.top && draggableRect.bottom <= boxNivelRect.bottom) {
+        boxNivel.style.border = '6px dashed red';
+      } else {
+        boxNivel.style.border = 'none';
+      }
+    });
+  });
+
+  container.addEventListener('dragleave', e => {
+    const boxNiveis = container.querySelectorAll('.box-nivel');
+    boxNiveis.forEach(boxNivel => {
+      boxNivel.style.border = 'none';
+    });
+  });
+});
+
+
+
+
+
+
+containers.forEach(container => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault()
+    container.classList.add('container-dragging-over')
+  })
+
+  container.addEventListener('dragleave', () => {
+    container.classList.remove('container-dragging-over')
+  })
+})
+
+
+
+
+
+
+
+
+
+
+/*
+containers.forEach(container => {
+
   container.addEventListener('dragover', e => {
     e.preventDefault()
     const afterElement = getDragAfterElement(container, e.clientY)
@@ -23,8 +128,20 @@ containers.forEach(container => {
     } else {
       container.insertBefore(draggable, afterElement)
     }
+  
+    const boxNiveis = document.querySelectorAll('.box-nivel');
+    boxNiveis.forEach(boxNivel => {
+      const boxNivelRect = boxNivel.getBoundingClientRect();
+      const draggableRect = draggable.getBoundingClientRect();
+      if (draggableRect.left >= boxNivelRect.left && draggableRect.right <= boxNivelRect.right && draggableRect.top >= boxNivelRect.top && draggableRect.bottom <= boxNivelRect.bottom) {
+        boxNivel.style.border = '6px dashed red';
+      } else {
+        boxNivel.style.border = 'none';
+      }
+    });
   })
-})
+  
+});*/
 
 function getDragAfterElement(container, y) {
   const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
@@ -39,6 +156,51 @@ function getDragAfterElement(container, y) {
     }
   }, { offset: Number.NEGATIVE_INFINITY }).element
 }
+
+
+
+
+
+
+
+
+
+/*
+
+const boxNiveis = document.querySelectorAll('.box-nivel');
+
+boxNiveis.forEach(boxNivel => {
+  boxNivel.addEventListener('mouseover', () => {
+    boxNivel.style.border = '6px dashed red';
+  });
+
+  boxNivel.addEventListener('mouseout', () => {
+    boxNivel.style.border = 'none';
+  });
+});
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

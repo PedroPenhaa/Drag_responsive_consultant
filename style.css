@@ -343,7 +343,7 @@ z-index: 2023;
   width: 100%;
   padding-top: 12px;
 }
-}
+
 
 .container li{
   width: 100%;
@@ -365,6 +365,11 @@ z-index: 2023;
 
 .draggable:hover{
   transform: scale(1.05);
+}
+
+.container-dragging-over {
+  border-style: dashed;
+  border-color: #333;
 }
 
 .draggable .info{
@@ -566,8 +571,8 @@ z-index: 2023;
   top: 0;
   left: 0;
   height: 100%;
-  width: 120px;
-  margin-left: -37px;
+  width: 82px;
+  margin-left: -3px;
 }
 
 .box-nivel .container li{
