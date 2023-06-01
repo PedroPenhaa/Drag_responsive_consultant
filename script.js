@@ -21,30 +21,6 @@ draggables.forEach(draggable => {
 })
 
 
-
-/*
-draggables.forEach(draggable => {
-  draggable.addEventListener('dragstart', () => {
-    draggable.classList.add('dragging')
-  })
-
-  draggable.addEventListener('dragend', () => {
-    draggable.classList.remove('dragging')
-    containers.forEach(container => {
-      container.classList.remove('container-dragging-over')
-      const boxNivel = container.closest('.box-nivel');
-      if (boxNivel) {
-        boxNivel.style.border = 'none';
-        const list = boxNivel.querySelector('.container');
-        if (list.contains(container)) {
-          list.appendChild(draggable);
-        }
-      }
-    })
-  })
-})
-*/
-
 /*
 draggables.forEach(draggable => {
   draggable.addEventListener('dragstart', () => {
@@ -58,7 +34,6 @@ draggables.forEach(draggable => {
   })
 })
 */
-
 
 containers.forEach(container => {
   container.addEventListener('dragover', e => {
@@ -92,10 +67,6 @@ containers.forEach(container => {
 });
 
 
-
-
-
-
 containers.forEach(container => {
   container.addEventListener('dragover', e => {
     e.preventDefault()
@@ -106,15 +77,6 @@ containers.forEach(container => {
     container.classList.remove('container-dragging-over')
   })
 })
-
-
-
-
-
-
-
-
-
 
 /*
 containers.forEach(container => {
@@ -157,59 +119,6 @@ function getDragAfterElement(container, y) {
   }, { offset: Number.NEGATIVE_INFINITY }).element
 }
 
-
-
-
-
-
-
-
-
-/*
-
-const boxNiveis = document.querySelectorAll('.box-nivel');
-
-boxNiveis.forEach(boxNivel => {
-  boxNivel.addEventListener('mouseover', () => {
-    boxNivel.style.border = '6px dashed red';
-  });
-
-  boxNivel.addEventListener('mouseout', () => {
-    boxNivel.style.border = 'none';
-  });
-});
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*ABRE E FECHA MODAL*/
 function abrirModal(carregarModal){
 /*  console.log("Carregar a janela modal: " + carregarModal); */
@@ -228,37 +137,15 @@ function fecharModal(fecharModal){
   document.body.style.overflow = 'auto';
 }
 
-
-
-
-
-
-
-
-
 /* EXPORT ITEM UNI*/
 function exportarItem(item){
-
-
 
   var lista1 = document.querySelector(".destinationList");
   var lista2 = document.querySelector(".listConsultores");
 
   lista2.appendChild(item); 
- 
-
-  var novoItem = item.cloneNode(true);
-
- 
-  lista1.removeChild(item);
- 
-
-  
+  lista1.removeChild(item);  
 }
-
-
-
-
 
 /*EXPORT ITEMS LIST*/
 function exportList(listId) {
@@ -275,12 +162,6 @@ function exportList(listId) {
   }
 }
 
-
-
-
-
-
-
 /*UPDATING QNT LIST*/
 function itemQnt() {
   var itemList = document.querySelector(".listConsultores");
@@ -293,6 +174,7 @@ function itemQnt() {
 
 }
 
+/*RETURN CONSULTORES NUM*/
 function consultoresQnt(){
   var listModal = document.querySelector('.destinationList');
   var countUp = document.querySelector('.itemCountConsultores');
@@ -300,11 +182,12 @@ function consultoresQnt(){
   countUp.innerHTML = listModal.children.length ;
 }
 
+/*ATUALIZA OS DADOS_TIMER*/
 function atualizaDados(){
-
- itemQnt();
- consultoresQnt();
-
+  itemQnt();
+  consultoresQnt();
 }
+
+
 
 setInterval(atualizaDados, 500);
