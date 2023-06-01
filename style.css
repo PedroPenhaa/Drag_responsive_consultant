@@ -148,9 +148,13 @@ main{
   padding: 0;
 }
 
+.corpo-modal .list-consultores .destinationList li info i{
+  
+}
+
 .corpo-modal .list-consultores .destinationList .draggable{
   padding: 1rem;
-  width: 330px;
+  width: 370px;
   height: 30px;
   /* background-color: white; */
   /* border: 1px solid black; */
@@ -516,7 +520,7 @@ z-index: 2023;
 
 .box-nivel{
   position: relative;
-  width: 123px;
+  width: 125px;
   height: 115px;
   
   border-radius: 10px;
@@ -551,7 +555,7 @@ z-index: 2023;
   align-items: center;
   justify-content: center;
   padding: 15px;
-  width: 123px;
+  width: 125px;
   height: 32px;
   border-radius: 5px;
   text-transform: bold;

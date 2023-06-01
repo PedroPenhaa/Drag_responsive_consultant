@@ -178,22 +178,49 @@ function exportarItem(item){
   var lista2 = document.querySelector(".listConsultores");
 
   lista2.appendChild(item); 
-  lista1.removeChild(item);  
+  lista1.removeChild(item); 
+
+
+  
+
+
+
+
+
+  var icon = item.querySelector(".info .iconClick");
+  if (icon) {
+    icon.classList.remove("uil-draggabledots");
+    icon.classList.add("uil-trash-alt");
+  }
+}
+
+var listConsultoresItems = document.querySelectorAll(".listConsultores .draggable");
+for (var i = 0; i < listConsultoresItems.length; i++) {
+  listConsultoresItems[i].onclick = function() {
+    exportarItem(this);
+  };
+
+
+
 }
 
 /*EXPORT ITEMS LIST*/
 function exportList(listId) {
   var listaOrigem = document.getElementById(listId);
   var listaDestino = document.querySelector('.destinationList');
-
   var itensOrigem = listaOrigem.getElementsByTagName('li');
-
-  console.log("a lista contem "+itensOrigem.length+" elementos");
 
   while (itensOrigem.length > 0) {
     var item = itensOrigem[0];
     listaDestino.appendChild(item);
   }
+
+
+    /* Troca Icon */ 
+    var icon = item.querySelector('.uil-draggabledots');
+    icon.classList.remove('uil-draggabledots');
+    icon.classList.add('uil-trash-alt');
+  
 }
 
 /*UPDATING QNT LIST*/
@@ -215,6 +242,7 @@ function consultoresQnt(){
 
   countUp.innerHTML = listModal.children.length ;
 }
+
 
 /*ATUALIZA OS DADOS_TIMER*/
 function atualizaDados(){
