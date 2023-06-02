@@ -354,6 +354,11 @@ z-index: 2023;
 } 
 
 
+.consultores  .list-box .listConsultores .draggable .info i{
+  display: none;
+}
+
+
 .container li{
   width: 100%;
   list-style-type: none;
