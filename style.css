@@ -135,8 +135,10 @@ main{
 .corpo-modal .list-consultores .destinationList{
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: column; 
+  width: 220px;
+  height: 100%;
+
   position: relative;
   top: 0;
 }
@@ -154,7 +156,7 @@ main{
 
 .corpo-modal .list-consultores .destinationList .draggable{
   padding: 1rem;
-  width: 370px;
+  width: 333px;
   height: 30px;
   /* background-color: white; */
   /* border: 1px solid black; */
@@ -163,6 +165,12 @@ main{
   margin-left: 40px;
   transition: transform .3s ease;
 }
+
+.corpo-modal .list-consultores .destinationList .draggable .info{
+  width: 200px;
+  margin-left: 10px;
+
+} 
 
 .corpo-modal .list-consultores .destinationList .draggable:hover{
 
@@ -196,7 +204,6 @@ main{
 .corpo-modal .destinationList li{
   color: black;
   display: block;
-
 }
 
 .corpo-modal .destinationList li:hover{
@@ -339,20 +346,19 @@ z-index: 2023;
 }
 
 .consultores  .list-box .listConsultores{
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  width: 250px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 235px;
+  height: 367px;
+  padding-top: 40px;
+  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  height: 340px;
-
 } 
 
+.consultores  .list-box .listConsultores .draggable .info span{
+  margin-left: 22px;
+}
 
 
 .consultores .list-box .listConsultores-dragging-over {
@@ -373,7 +379,7 @@ z-index: 2023;
   width: 100%;
   list-style-type: none;
   display: flex;
-  align-items:center;
+  align-items:top;
 }
 
 .container li i{
